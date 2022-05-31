@@ -12,7 +12,7 @@ COPY . /usr/app
 WORKDIR /usr/app
 
 # Install & cache app dependencies
-RUN yarn
+RUN npm install
 
 # Add `/usr/src/app/node_modules/.bin` to $PATH
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
