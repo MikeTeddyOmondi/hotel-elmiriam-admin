@@ -1,0 +1,21 @@
+version: "3.6"
+
+services:
+  web-admin:
+    image: ranckosolutionsinc/hotel-elimiriam-admin:1.0-beta
+    build: ./
+    restart: always
+    ports:
+      - 3030:8080
+    volumes:
+      - hotel-elmiriam-admin-public_assets:/usr/share/nginx/html
+    networks:
+      - hotel-elmiriam-network
+
+volumes:
+  hotel-elmiriam-admin-public_assets:
+
+networks:
+  hotel-elmiriam-network:
+    name: hotel-elmiriam
+    driver: bridge
