@@ -1,7 +1,7 @@
 # #######
 # Stage 1
 # Build docker | React App
-FROM node:16.13.2-alpine as build-stage
+FROM node:16.13.2 as build-stage
 
 # set working directory
 RUN mkdir /usr/app
