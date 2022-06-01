@@ -6,7 +6,7 @@ services:
     build: ./
     restart: always
     ports:
-      - 3030:8080
+      - 3030:80
     volumes:
       - hotel-elmiriam-admin-public_assets:/usr/share/nginx/html
     networks:
