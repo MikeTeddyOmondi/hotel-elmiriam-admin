@@ -12,6 +12,7 @@ COPY . /usr/app/
 WORKDIR /usr/app
 
 # Install & cache app dependencies
+USER root
 RUN npm install --silent
 RUN npm install react-scripts@3.0.1 -g --silent
 
@@ -19,6 +20,7 @@ RUN npm install react-scripts@3.0.1 -g --silent
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # Build static assets
+USER node
 RUN npm run build
 
 # #######
