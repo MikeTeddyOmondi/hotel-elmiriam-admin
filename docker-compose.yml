@@ -3,6 +3,7 @@ version: "3.6"
 services:
   web-admin:
     image: ranckosolutionsinc/hotel-elimiriam-admin:1.0-beta
+    container_name: hotel-elmiriam-admin-client
     build: ./
     restart: always
     ports:
