@@ -26,7 +26,7 @@ RUN npm run build
 # #######
 # Stage 2
 # Copy the react app build above to NGINX container image
-FROM nginx:stable-alpine
+FROM nginx:1.22.1-alpine
 
 WORKDIR /usr/share/nginx/html
 
